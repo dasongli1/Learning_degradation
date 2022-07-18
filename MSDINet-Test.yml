@@ -11,8 +11,8 @@ datasets:
     name: gopro-test
     type: PairedImageDataset
 
-    dataroot_gt: /workspace/lidasong/HINet/datasets/GoPro/test/target.lmdb
-    dataroot_lq: /workspace/lidasong/HINet/datasets/GoPro/test/input.lmdb
+    dataroot_gt: ./datasets/GoPro/test/target.lmdb
+    dataroot_lq: ./datasets/GoPro/test/input.lmdb
 
     io_backend:
       type: lmdb
