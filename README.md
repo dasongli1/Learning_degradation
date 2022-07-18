@@ -22,8 +22,27 @@ cuda 11.3
 ```
 
 ```
-git clone 
+git clone https://github.com/dasongli1/Learning_degradation.git
 cd Learning_degradation
 pip install -r requirements.txt
 python setup.py develop --no_cuda_ext
 ```
+
+### Image Deblur - GoPro dataset
+
+* download the [train](https://drive.google.com/drive/folders/1AsgIP9_X0bg0olu2-1N6karm2x15cJWE) set in ./datasets/GoPro/train and [test](https://drive.google.com/drive/folders/1a2qKfXWpNuTGOm2-Jex8kfNSzYJLbqkf) set in ./datasets/GoPro/test (refer to [MPRNet](https://github.com/swz30/MPRNet)) 
+  * it should be like:
+  
+    ```bash
+    ./datasets/
+    ./datasets/GoPro/
+    ./datasets/GoPro/train/
+    ./datasets/GoPro/train/input/
+    ./datasets/GoPro/train/target/
+    ./datasets/GoPro/test/
+    ./datasets/GoPro/test/input/
+    ./datasets/GoPro/test/target/
+    ```
+  
+  * ```python gopro.py```
+
