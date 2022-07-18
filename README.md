@@ -13,7 +13,7 @@ Experiments on the GoPro and RealBlur datasets demonstrate that our proposed deb
 **Keywords**: Image Deblurring, Degradation Representations
 
 ## Performance
-<center><img src="figures/results.png "width="100%"></center>
+<center><img src="figures/results.png "width="80%"></center>
 
 
 
