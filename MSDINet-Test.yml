@@ -20,7 +20,7 @@ datasets:
 # network structures
 network_g:
   type: msdi_net
-  wf: 64
+  # wf: 64
   hin_position_left: 0
   hin_position_right: 4
 
