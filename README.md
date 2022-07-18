@@ -49,8 +49,16 @@ python setup.py develop --no_cuda_ext
     ```
   
   * ```python gopro.py```
+  
+### Training:
+* Download the model of [net_Encoder](https://drive.google.com/file/d/1T7Pf065mt9bm801bVOAjmOA8zYKoMz2m/view?usp=sharing) and [prior_upsampling](https://drive.google.com/file/d/168YGqQ9rBSGavOb-TlyQkaLGEKSkpBqu/view?usp=sharing) to ./checkpoints/
+
+* training script:
+```
+python -m torch.distributed.launch --nproc_per_node=8 basicsr/train.py -opt MSDINet-Train.yml --launcher pytorch
+```
  
-### Evaluation: 
+### Testing: 
 * eval: We provide the pre-trained model for evaluation.
 * Please download the model [pretrained model](https://drive.google.com/file/d/1HB06DPJ2bydHhjjuxmVGrQ7F63dbaKXL/view?usp=sharing) to ./checkpoints/msdi_net.pth
-* ```python basicsr/test.py -opt MSDINet-GoPro.yml ```
+* ```python basicsr/test.py -opt MSDINet-Test.yml ```
