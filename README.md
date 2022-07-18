@@ -2,7 +2,7 @@
 
 This is an official implementation of “Learning Degradation Representations for Image Deblurring” with PyTorch, accepted by ECCV 2022.
 
-<center><img src="figures/network.png "width="80%"></center>
+<center><img src="figures/network.png "width="60%"></center>
 
 **Abstract**: In various learning-based image restoration tasks, such as image denoising and image super-resolution, the degradation representations were widely used to model the degradation process and handle complicated degradation patterns.
 However, they are less explored in learning-based image deblurring as blur kernel estimation cannot perform well in real-world challenging cases. We argue that it is particularly necessary for image deblurring to model degradation representations since blurry patterns typically show much larger variations than noisy patterns or high-frequency textures.
@@ -11,6 +11,11 @@ To make learned degradation representations effective in reblurring and deblurri
 Experiments on the GoPro and RealBlur datasets demonstrate that our proposed deblurring framework with the learned degradation representations outperforms state-of-the-art methods with appealing improvements.
 
 **Keywords**: Image Deblurring, Degradation Representations
+
+## Performance
+<center><img src="figures/results.png "width="100%"></center>
+
+
 
 ## Get Started
 
@@ -28,8 +33,7 @@ pip install -r requirements.txt
 python setup.py develop --no_cuda_ext
 ```
 
-### Image Deblur - GoPro dataset
-
+### Image Deblurring
 * download the [train](https://drive.google.com/drive/folders/1AsgIP9_X0bg0olu2-1N6karm2x15cJWE) set in ./datasets/GoPro/train and [test](https://drive.google.com/drive/folders/1a2qKfXWpNuTGOm2-Jex8kfNSzYJLbqkf) set in ./datasets/GoPro/test (refer to [MPRNet](https://github.com/swz30/MPRNet)) 
   * it should be like:
   
