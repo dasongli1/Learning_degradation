@@ -45,4 +45,8 @@ python setup.py develop --no_cuda_ext
     ```
   
   * ```python gopro.py```
-
+ 
+### Evaluation: 
+* eval: We provide the pre-trained model for evaluation.
+* Please download the model [pretrained model]() to ./checkpoints/msdi_net.pth
+* ```python basicsr/test.py -opt MSDINet-GoPro.yml ```
