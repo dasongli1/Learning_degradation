@@ -51,7 +51,7 @@ python setup.py develop --no_cuda_ext
   * ```python gopro.py```
   
 ### Training:
-* Download the model of [net_Encoder](https://drive.google.com/file/d/1T7Pf065mt9bm801bVOAjmOA8zYKoMz2m/view?usp=sharing) and [prior_upsampling](https://drive.google.com/file/d/168YGqQ9rBSGavOb-TlyQkaLGEKSkpBqu/view?usp=sharing) to ./checkpoints/
+* Download the pre-trained model of [net_Encoder](https://drive.google.com/file/d/1T7Pf065mt9bm801bVOAjmOA8zYKoMz2m/view?usp=sharing) and [prior_upsampling](https://drive.google.com/file/d/168YGqQ9rBSGavOb-TlyQkaLGEKSkpBqu/view?usp=sharing) to ./checkpoints/
 
 * training script:
 ```
