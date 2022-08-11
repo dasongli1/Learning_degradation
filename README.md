@@ -62,3 +62,9 @@ python -m torch.distributed.launch --nproc_per_node=8 basicsr/train.py -opt MSDI
 * eval: We provide the pre-trained model for evaluation.
 * Please download the model [pretrained model](https://drive.google.com/file/d/1HB06DPJ2bydHhjjuxmVGrQ7F63dbaKXL/view?usp=sharing) to ./checkpoints/msdi_net.pth
 * ```python basicsr/test.py -opt MSDINet-Test.yml ```
+
+## Acknowledgement
+
+In this project, we use parts of codes in:
+- [HINet](https://github.com/megvii-model/HINet)
+- [SPADE](https://github.com/NVlabs/SPADE)
