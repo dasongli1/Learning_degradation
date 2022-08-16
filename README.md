@@ -66,5 +66,6 @@ python -m torch.distributed.launch --nproc_per_node=8 basicsr/train.py -opt MSDI
 ## Acknowledgement
 
 In this project, we use parts of codes in:
+- [Basicsr](https://github.com/XPixelGroup/BasicSR)
 - [HINet](https://github.com/megvii-model/HINet)
 - [SPADE](https://github.com/NVlabs/SPADE)
