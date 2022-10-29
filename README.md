@@ -63,6 +63,19 @@ python -m torch.distributed.launch --nproc_per_node=8 basicsr/train.py -opt MSDI
 * Please download the model [pretrained model](https://drive.google.com/file/d/1HB06DPJ2bydHhjjuxmVGrQ7F63dbaKXL/view?usp=sharing) to ./checkpoints/msdi_net.pth
 * ```python basicsr/test.py -opt MSDINet-Test.yml ```
 
+### Citation
+If our work is useful for your research, please consider citing:
+
+```bibtex
+@InProceedings{li2022learning,
+    author = {Li, Dasong and Zhang, Yi and Cheung, Ka Chun and Wang, Xiaogang and Qin, Hongwei and Li, Hongsheng},
+    title = {Learning Degradation Representations for Image Deblurring},
+    booktitle = {ECCV},
+    year = {2022}
+}
+```
+
+
 ## Acknowledgement
 
 In this project, we use parts of codes in:
