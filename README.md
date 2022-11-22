@@ -49,19 +49,36 @@ python setup.py develop --no_cuda_ext
     ```
   
   * ```python gopro.py```
-  
-### Training:
+
+### Training version 1:
 * Download the pre-trained model of [net_Encoder](https://drive.google.com/file/d/1T7Pf065mt9bm801bVOAjmOA8zYKoMz2m/view?usp=sharing) and [prior_upsampling](https://drive.google.com/file/d/168YGqQ9rBSGavOb-TlyQkaLGEKSkpBqu/view?usp=sharing) to ./checkpoints/
 
 * training script:
 ```
 python -m torch.distributed.launch --nproc_per_node=8 basicsr/train.py -opt MSDINet-Train.yml --launcher pytorch
 ```
+
+### Training version 2's Learning degradation in joint training of reblurring and deblurring:
+* previous version of learning degradation requires A100 gpus (80G) to train. We provide version 2 (less than 16G).
+* training script:
+```
+python -m torch.distributed.launch --nproc_per_node=8 basicsr/train1.py -opt MSDINet2e-Train.yml --launcher pytorch
+```
+
+### Training version 2:
+* Download the pre-trained model of [net_Encoder2](https://drive.google.com/file/d/131dyqC11NNeqhfWQoVVYMyNjZFbpTc7d/view?usp=share_link), [prior_upsampling2](https://drive.google.com/file/d/18BrD3cM6KDeuMFnbauZHbvLDPmW-RER5/view?usp=share_link) and [prior_upsampling](https://drive.google.com/file/d/1T7Pf065mt9bm801bVOAjmOA8zYKoMz2m/view?usp=sharing) to ./checkpoints/
+* training script:
+```
+python -m torch.distributed.launch --nproc_per_node=8 basicsr/train.py -opt MSDINet2-Train.yml --launcher pytorch
+```
+
+
  
 ### Testing: 
 * eval: We provide the pre-trained model for evaluation.
 * Please download the model [pretrained model](https://drive.google.com/file/d/1HB06DPJ2bydHhjjuxmVGrQ7F63dbaKXL/view?usp=sharing) to ./checkpoints/msdi_net.pth
 * ```python basicsr/test.py -opt MSDINet-Test.yml ```
+
 
 ### Citation
 If our work is useful for your research, please consider citing:
