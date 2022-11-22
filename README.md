@@ -66,7 +66,7 @@ python -m torch.distributed.launch --nproc_per_node=8 basicsr/train1.py -opt MSD
 ```
 
 ### Training version 2:
-* Download the pre-trained model of [net_Encoder2](https://drive.google.com/file/d/131dyqC11NNeqhfWQoVVYMyNjZFbpTc7d/view?usp=share_link), [prior_upsampling2](https://drive.google.com/file/d/18BrD3cM6KDeuMFnbauZHbvLDPmW-RER5/view?usp=share_link) and [prior_upsampling](https://drive.google.com/file/d/1T7Pf065mt9bm801bVOAjmOA8zYKoMz2m/view?usp=sharing) to ./checkpoints/
+* Download the pre-trained model of [net_Encoder2](https://drive.google.com/file/d/131dyqC11NNeqhfWQoVVYMyNjZFbpTc7d/view?usp=share_link), [prior_upsampling2](https://drive.google.com/file/d/18BrD3cM6KDeuMFnbauZHbvLDPmW-RER5/view?usp=share_link) and [net_Encoder](https://drive.google.com/file/d/1T7Pf065mt9bm801bVOAjmOA8zYKoMz2m/view?usp=sharing) to ./checkpoints/
 * training script:
 ```
 python -m torch.distributed.launch --nproc_per_node=8 basicsr/train.py -opt MSDINet2-Train.yml --launcher pytorch
